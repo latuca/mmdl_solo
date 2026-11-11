@@ -1,0 +1,33 @@
+{
+ "n_in": 2000,
+ "n_out": 1997,
+ "stats": {
+  "target_plain": 1124,
+  "mc_options_stripped": 753,
+  "target_answer_block": 651,
+  "target_think_fallback": 222,
+  "mc_options_kept_inline": 112
+ },
+ "kept_by_type": {
+  "I": 600,
+  "C": 999,
+  "V": 398
+ },
+ "drops": {
+  "no": 3
+ },
+ "dropped_ids": [
+  [
+   "c_998",
+   "no_reasoning"
+  ],
+  [
+   "v_195",
+   "no_reasoning"
+  ],
+  [
+   "v_262",
+   "no_reasoning"
+  ]
+ ]
+}

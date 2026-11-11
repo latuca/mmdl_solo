@@ -1,0 +1,11 @@
+len check 0/1997
+len check 200/1997
+len check 400/1997
+len check 600/1997
+len check 800/1997
+len check 1000/1997
+len check 1200/1997
+len check 1400/1997
+len check 1600/1997
+len check 1800/1997
+{"n_in": 2000, "n_out": 1997, "stats": {"target_plain": 1124, "mc_options_stripped": 753, "target_answer_block": 651, "target_think_fallback": 222, "mc_options_kept_inline": 112}, "kept_by_type": {"I": 600, "C": 999, "V": 398}, "drops": {"no": 3}}

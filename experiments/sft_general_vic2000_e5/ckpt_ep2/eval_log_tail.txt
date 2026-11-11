@@ -1,0 +1,200 @@
+Inference 822/900 validation_Psychology_12 tokens=15
+Inference 823/900 validation_Psychology_13 tokens=48
+Inference 824/900 validation_Psychology_14 tokens=405
+Inference 825/900 validation_Psychology_15 tokens=15
+Inference 826/900 validation_Psychology_16 tokens=387
+Inference 827/900 validation_Psychology_17 tokens=61
+Inference 828/900 validation_Psychology_18 tokens=358
+Inference 829/900 validation_Psychology_19 tokens=111
+Inference 830/900 validation_Psychology_20 tokens=26
+Inference 831/900 validation_Psychology_21 tokens=34
+Inference 832/900 validation_Psychology_22 tokens=28
+Inference 833/900 validation_Psychology_23 tokens=48
+Inference 834/900 validation_Psychology_24 tokens=233
+Inference 835/900 validation_Psychology_25 tokens=20
+Inference 836/900 validation_Psychology_26 tokens=275
+Inference 837/900 validation_Psychology_27 tokens=18
+Inference 838/900 validation_Psychology_28 tokens=58
+Inference 839/900 validation_Psychology_29 tokens=558
+Inference 840/900 validation_Psychology_30 tokens=37
+Inference 841/900 validation_Public_Health_1 tokens=15
+Inference 842/900 validation_Public_Health_2 tokens=347
+Inference 843/900 validation_Public_Health_3 tokens=20
+Inference 844/900 validation_Public_Health_4 tokens=227
+Inference 845/900 validation_Public_Health_5 tokens=340
+Inference 846/900 validation_Public_Health_6 tokens=255
+Inference 847/900 validation_Public_Health_7 tokens=480
+Inference 848/900 validation_Public_Health_8 tokens=174
+Inference 849/900 validation_Public_Health_9 tokens=215
+Inference 850/900 validation_Public_Health_10 tokens=289
+Inference 851/900 validation_Public_Health_11 tokens=269
+Inference 852/900 validation_Public_Health_12 tokens=177
+Inference 853/900 validation_Public_Health_13 tokens=255
+Inference 854/900 validation_Public_Health_14 tokens=216
+Inference 855/900 validation_Public_Health_15 tokens=116
+Inference 856/900 validation_Public_Health_16 tokens=767
+Inference 857/900 validation_Public_Health_17 tokens=519
+Inference 858/900 validation_Public_Health_18 tokens=222
+Inference 859/900 validation_Public_Health_19 tokens=515
+Inference 860/900 validation_Public_Health_20 tokens=228
+Inference 861/900 validation_Public_Health_21 tokens=372
+Inference 862/900 validation_Public_Health_22 tokens=154
+Inference 863/900 validation_Public_Health_23 tokens=966
+Inference 864/900 validation_Public_Health_24 tokens=317
+Inference 865/900 validation_Public_Health_25 tokens=134
+Inference 866/900 validation_Public_Health_26 tokens=403
+Inference 867/900 validation_Public_Health_27 tokens=126
+Inference 868/900 validation_Public_Health_28 tokens=256
+Inference 869/900 validation_Public_Health_29 tokens=659
+Inference 870/900 validation_Public_Health_30 tokens=1283
+Inference 871/900 validation_Sociology_1 tokens=257
+Inference 872/900 validation_Sociology_2 tokens=276
+Inference 873/900 validation_Sociology_3 tokens=374
+Inference 874/900 validation_Sociology_4 tokens=228
+Inference 875/900 validation_Sociology_5 tokens=362
+Inference 876/900 validation_Sociology_6 tokens=345
+Inference 877/900 validation_Sociology_7 tokens=185
+Inference 878/900 validation_Sociology_8 tokens=219
+Inference 879/900 validation_Sociology_9 tokens=258
+Inference 880/900 validation_Sociology_10 tokens=209
+Inference 881/900 validation_Sociology_11 tokens=229
+Inference 882/900 validation_Sociology_12 tokens=241
+Inference 883/900 validation_Sociology_13 tokens=159
+Inference 884/900 validation_Sociology_14 tokens=240
+Inference 885/900 validation_Sociology_15 tokens=164
+Inference 886/900 validation_Sociology_16 tokens=235
+Inference 887/900 validation_Sociology_17 tokens=216
+Inference 888/900 validation_Sociology_18 tokens=268
+Inference 889/900 validation_Sociology_19 tokens=186
+Inference 890/900 validation_Sociology_20 tokens=157
+Inference 891/900 validation_Sociology_21 tokens=14
+Inference 892/900 validation_Sociology_22 tokens=350
+Inference 893/900 validation_Sociology_23 tokens=245
+Inference 894/900 validation_Sociology_24 tokens=29
+Inference 895/900 validation_Sociology_25 tokens=371
+Inference 896/900 validation_Sociology_26 tokens=286
+Inference 897/900 validation_Sociology_27 tokens=363
+Inference 898/900 validation_Sociology_28 tokens=358
+Inference 899/900 validation_Sociology_29 tokens=51
+Inference 900/900 validation_Sociology_30 tokens=192
+[rank0]:[W1112 04:30:36.708012048 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+PASS: final-field ambiguity, terminal priority, official fallback, length policy, judge Z/invalid, official open GT.
+INFO 11-12 04:30:40 [__init__.py:216] Automatically detected platform cuda.
+INFO 11-12 04:30:42 [utils.py:233] non-default args: {'dtype': 'bfloat16', 'seed': 3407, 'max_model_len': 32768, 'max_num_batched_tokens': 2048, 'max_num_seqs': 1, 'disable_log_stats': True, 'enforce_eager': True, 'model': '/home/latuca/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218'}
+INFO 11-12 04:30:46 [model.py:547] Resolved architecture: Qwen3ForCausalLM
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO 11-12 04:30:46 [model.py:1510] Using max model len 32768
+INFO 11-12 04:30:46 [scheduler.py:205] Chunked prefill is enabled with max_num_batched_tokens=2048.
+INFO 11-12 04:30:46 [__init__.py:381] Cudagraph is disabled under eager mode
+WARNING 11-12 04:30:47 [__init__.py:3036] We must use the `spawn` multiprocessing start method. Overriding VLLM_WORKER_MULTIPROC_METHOD to 'spawn'. See https://docs.vllm.ai/en/latest/usage/troubleshooting.html#python-multiprocessing for more information. Reasons: CUDA is initialized
+INFO 11-12 04:30:49 [__init__.py:216] Automatically detected platform cuda.
+[1;36m(EngineCore_DP0 pid=116627)[0;0m INFO 11-12 04:30:50 [core.py:644] Waiting for init message from front-end.
+[1;36m(EngineCore_DP0 pid=116627)[0;0m INFO 11-12 04:30:50 [core.py:77] Initializing a V1 LLM engine (v0.11.0) with config: model='/home/latuca/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218', speculative_config=None, tokenizer='/home/latuca/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=3407, served_model_name=/home/latuca/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218, enable_prefix_caching=True, chunked_prefill_enabled=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":null,"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"cudagraph_mode":0,"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"use_inductor_graph_partition":false,"pass_config":{},"max_capture_size":0,"local_cache_dir":null}
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[1;36m(EngineCore_DP0 pid=116627)[0;0m INFO 11-12 04:30:51 [parallel_state.py:1208] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+[1;36m(EngineCore_DP0 pid=116627)[0;0m WARNING 11-12 04:30:51 [topk_topp_sampler.py:66] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[1;36m(EngineCore_DP0 pid=116627)[0;0m INFO 11-12 04:30:51 [gpu_model_runner.py:2602] Starting to load model /home/latuca/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218...
+[1;36m(EngineCore_DP0 pid=116627)[0;0m INFO 11-12 04:30:51 [gpu_model_runner.py:2634] Loading model from scratch...
+[1;36m(EngineCore_DP0 pid=116627)[0;0m INFO 11-12 04:30:51 [cuda.py:366] Using Flash Attention backend on V1 engine.
+[1;36m(EngineCore_DP0 pid=116627)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/5 [00:00<?, ?it/s]
+[1;36m(EngineCore_DP0 pid=116627)[0;0m Loading safetensors checkpoint shards:  20% Completed | 1/5 [00:04<00:18,  4.55s/it]
+[1;36m(EngineCore_DP0 pid=116627)[0;0m Loading safetensors checkpoint shards:  40% Completed | 2/5 [00:09<00:15,  5.03s/it]
+[1;36m(EngineCore_DP0 pid=116627)[0;0m Loading safetensors checkpoint shards:  60% Completed | 3/5 [00:11<00:07,  3.51s/it]
+[1;36m(EngineCore_DP0 pid=116627)[0;0m Loading safetensors checkpoint shards:  80% Completed | 4/5 [00:17<00:04,  4.30s/it]
+[1;36m(EngineCore_DP0 pid=116627)[0;0m Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:22<00:00,  4.86s/it]
+[1;36m(EngineCore_DP0 pid=116627)[0;0m Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:22<00:00,  4.60s/it]
+[1;36m(EngineCore_DP0 pid=116627)[0;0m 
+[1;36m(EngineCore_DP0 pid=116627)[0;0m INFO 11-12 04:31:14 [default_loader.py:267] Loading weights took 23.06 seconds
+[1;36m(EngineCore_DP0 pid=116627)[0;0m INFO 11-12 04:31:15 [gpu_model_runner.py:2653] Model loading took 15.2683 GiB and 23.146421 seconds
+[1;36m(EngineCore_DP0 pid=116627)[0;0m INFO 11-12 04:31:15 [gpu_worker.py:298] Available KV cache memory: 5.65 GiB
+[1;36m(EngineCore_DP0 pid=116627)[0;0m INFO 11-12 04:31:16 [kv_cache_utils.py:1087] GPU KV cache size: 41,136 tokens
+[1;36m(EngineCore_DP0 pid=116627)[0;0m INFO 11-12 04:31:16 [kv_cache_utils.py:1091] Maximum concurrency for 32,768 tokens per request: 1.26x
+[1;36m(EngineCore_DP0 pid=116627)[0;0m WARNING 11-12 04:31:16 [cudagraph_dispatcher.py:106] cudagraph dispatching keys are not initialized. No cudagraph will be used.
+[1;36m(EngineCore_DP0 pid=116627)[0;0m INFO 11-12 04:31:16 [core.py:210] init engine (profile, create kv cache, warmup model) took 0.94 seconds
+[1;36m(EngineCore_DP0 pid=116627)[0;0m INFO 11-12 04:31:16 [__init__.py:381] Cudagraph is disabled under eager mode
+INFO 11-12 04:31:16 [llm.py:306] Supported_tasks: ['generate']
+Judge validation_Accounting_13: no_match attempt=1
+Judge validation_Accounting_17: no_match attempt=1
+Judge validation_Accounting_20: no_match attempt=1
+Judge validation_Architecture_and_Engineering_14: unparsed attempt=25
+Judge validation_Architecture_and_Engineering_22: no_match attempt=1
+Judge validation_Basic_Medical_Science_10: valid_option attempt=1
+Judge validation_Basic_Medical_Science_14: no_match attempt=1
+Judge validation_Biology_10: no_match attempt=1
+Judge validation_Chemistry_4: no_match attempt=1
+Judge validation_Chemistry_13: valid_option attempt=1
+Judge validation_Chemistry_19: no_match attempt=1
+Judge validation_Chemistry_20: no_match attempt=1
+Judge validation_Chemistry_23: valid_option attempt=1
+Judge validation_Chemistry_30: no_match attempt=1
+Judge validation_Computer_Science_9: no_match attempt=1
+Judge validation_Computer_Science_23: valid_option attempt=1
+Judge validation_Computer_Science_26: valid_option attempt=1
+Judge validation_Electronics_2: no_match attempt=1
+Judge validation_Electronics_4: valid_option attempt=1
+Judge validation_Electronics_5: no_match attempt=1
+Judge validation_Electronics_6: no_match attempt=1
+Judge validation_Electronics_11: no_match attempt=1
+Judge validation_Electronics_16: no_match attempt=1
+Judge validation_Electronics_21: valid_option attempt=1
+Judge validation_Electronics_24: no_match attempt=1
+Judge validation_Electronics_25: valid_option attempt=1
+Judge validation_Electronics_26: valid_option attempt=1
+Judge validation_Electronics_27: no_match attempt=1
+Judge validation_Electronics_29: no_match attempt=1
+Judge validation_Electronics_30: valid_option attempt=1
+Judge validation_Energy_and_Power_17: no_match attempt=1
+Judge validation_Finance_8: no_match attempt=1
+Judge validation_Finance_17: no_match attempt=1
+Judge validation_Finance_20: valid_option attempt=1
+Judge validation_Finance_23: no_match attempt=1
+Judge validation_Finance_24: no_match attempt=1
+Judge validation_Finance_25: no_match attempt=1
+Judge validation_Geography_4: no_match attempt=1
+Judge validation_Geography_14: no_match attempt=1
+Judge validation_Geography_20: no_match attempt=1
+Judge validation_Geography_22: no_match attempt=1
+Judge validation_Manage_3: no_match attempt=1
+Judge validation_Manage_17: no_match attempt=1
+Judge validation_Manage_20: valid_option attempt=1
+Judge validation_Manage_21: valid_option attempt=1
+Judge validation_Manage_23: valid_option attempt=1
+Judge validation_Manage_26: no_match attempt=1
+Judge validation_Math_15: valid_option attempt=1
+Judge validation_Music_9: no_match attempt=1
+Judge validation_Pharmacy_3: no_match attempt=1
+Judge validation_Pharmacy_26: invalid_option attempt=25
+Judge validation_Psychology_20: no_match attempt=1
+[rank0]:[W1112 04:36:41.872981298 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+PASS: final-field ambiguity, terminal priority, official fallback, length policy, judge Z/invalid, official open GT.
+{
+  "total": 900,
+  "graded": 900,
+  "correct": 497,
+  "incorrect": 403,
+  "accuracy": 0.5522222222222222,
+  "accuracy_percent": 55.222222222222214,
+  "aggregation": "unweighted mean of 30 subject accuracies",
+  "method_counts": {
+    "explicit_final_parser": 839,
+    "local_qwen3_8b_judge_parser": 52,
+    "output_limit_incorrect": 8,
+    "official_parser_fallback": 1
+  },
+  "length_limit_incorrect": 8,
+  "judge_count": 52,
+  "judge_states": {
+    "no_match": 35,
+    "unparsed": 1,
+    "valid_option": 15,
+    "invalid_option": 1
+  },
+  "random_fallback": 0,
+  "exact_official_report_reproduction": false
+}
+**epoch 2: 497/900 = 55.22%** (베이스라인 576/900 = 64.00%, 차이 -79문항 / -8.78%p)
