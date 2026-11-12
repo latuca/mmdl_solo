@@ -18,7 +18,7 @@
 
 ## 보관 위치
 - 서버 AIX-408-UBUNTU-97: /home/latuca/MMDL_solo/models/sft_general_vic2000_e5/
-- GitHub 레포에는 가중치(.safetensors)를 올리지 않았다(파일당 100MB 제한). 설정 파일과 체크섬만 올렸다.
+- GitHub 레포: 성능이 가장 좋은 ep4 어댑터(adapter_model.safetensors)만 Git LFS로 올렸다. 나머지 가중치는 서버에만 있다(파일당 100MB 제한).
 
 ## merged 복원 (어댑터만 있을 때)
 python MMDL_solo/scripts/merge_adapter.py --baseline MMDL_solo/config/training_settings_only.json \
