@@ -1,0 +1,18 @@
+{
+ "base|C|False": 3896,
+ "base|C|None": 116,
+ "base|C|True": 3980,
+ "base|I|False": 1705,
+ "base|I|True": 3095,
+ "base|V|False": 891,
+ "base|V|None": 1,
+ "base|V|True": 2292,
+ "ep4|C|False": 3499,
+ "ep4|C|None": 26,
+ "ep4|C|True": 4467,
+ "ep4|I|False": 482,
+ "ep4|I|True": 4318,
+ "ep4|V|False": 514,
+ "ep4|V|None": 5,
+ "ep4|V|True": 2665
+}

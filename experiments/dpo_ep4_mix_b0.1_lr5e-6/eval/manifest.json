@@ -1,0 +1,188 @@
+{
+  "created_at": "2026-11-13T03:14:36.723136+00:00",
+  "fingerprint": "33b96d058bfbb432f7fe84ff204202a902e75ed6063a69e993c167d36a1f0352",
+  "configuration": {
+    "model": {
+      "repo": "Qwen/Qwen3-VL-4B-Instruct",
+      "revision": "ebb281ec70b05090aa6165b016eac8ec08e71b17",
+      "dtype": "bfloat16",
+      "quantization": null
+    },
+    "dataset": {
+      "repo": "MMMU/MMMU",
+      "revision": "98e6ac0cb9b7b2cd2c991b85a50762edc4aedc68",
+      "split": "validation",
+      "configs": [
+        "Accounting",
+        "Agriculture",
+        "Architecture_and_Engineering",
+        "Art",
+        "Art_Theory",
+        "Basic_Medical_Science",
+        "Biology",
+        "Chemistry",
+        "Clinical_Medicine",
+        "Computer_Science",
+        "Design",
+        "Diagnostics_and_Laboratory_Medicine",
+        "Economics",
+        "Electronics",
+        "Energy_and_Power",
+        "Finance",
+        "Geography",
+        "History",
+        "Literature",
+        "Manage",
+        "Marketing",
+        "Materials",
+        "Math",
+        "Mechanical_Engineering",
+        "Music",
+        "Pharmacy",
+        "Physics",
+        "Psychology",
+        "Public_Health",
+        "Sociology"
+      ]
+    },
+    "sampling": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "repetition_penalty": 1.0,
+      "presence_penalty": 1.5,
+      "seed": 3407
+    },
+    "max_new_tokens": 32768,
+    "vision": {
+      "min_pixels": 1003520,
+      "max_pixels": 4014080
+    },
+    "runtime": {
+      "dtype": "bfloat16",
+      "quantization": null,
+      "tensor_parallel_size": 1,
+      "max_model_len": 64000,
+      "gpu_memory_utilization": 0.9,
+      "max_num_seqs": 1,
+      "max_num_batched_tokens": 4096,
+      "enforce_eager": true,
+      "max_images_per_prompt": 5,
+      "engine": "vLLM",
+      "chat_template_add_generation_prompt": true,
+      "gpu": "NVIDIA GeForce RTX 4090"
+    },
+    "prompts": {
+      "multiple-choice": "{optional_hint}Question: {question}\nOptions:\n{lettered_options}Please select the correct answer from the options above.",
+      "open": "{optional_hint}Question: {question}",
+      "optional_hint": "Hint: {hint}\n",
+      "lettered_options": "A. {option_A}\nB. {option_B}\n...",
+      "suffixes": {
+        "multiple-choice": "On the last line, write \"Final answer: LETTER\", replacing LETTER with one uppercase option letter.",
+        "open": "On the last line, write \"Final answer: ANSWER\", replacing ANSWER with a concise final answer."
+      }
+    },
+    "judge": {
+      "repo": "Qwen/Qwen3-8B",
+      "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "prompt_template": "You are an AI assistant who will help me to match an answer with several options of a single-choice question. You are provided with a question, several options, and an answer, and you need to find which option is most similar to the answer. If the meaning of all options are significantly different from the answer, output Z. Your should output a single uppercase character in A, B, C, D (if they are valid options), and Z. \nExample 1: \nQuestion: What is the main object in image?\nOptions: A. teddy bear B. rabbit C. cat D. dog\nAnswer: a cute teddy bear\nYour output: A\nExample 2: \nQuestion: What is the main object in image?\nOptions: A. teddy bear B. rabbit C. cat D. dog\nAnswer: Spider\nYour output: Z\nExample 3: \nQuestion: {}?\nOptions: {}\nAnswer: {}\nYour output: ",
+      "max_attempts": 25,
+      "retry_wait_seconds": 5,
+      "max_new_tokens": 4096,
+      "enable_thinking": false,
+      "sampling": {
+        "temperature": 0,
+        "top_p": 1,
+        "top_k": -1,
+        "repetition_penalty": 1,
+        "presence_penalty": 0,
+        "seed": 3407
+      },
+      "runtime": {
+        "dtype": "bfloat16",
+        "quantization": null,
+        "tensor_parallel_size": 1,
+        "max_model_len": 32768,
+        "gpu_memory_utilization": 0.9,
+        "max_num_seqs": 1,
+        "max_num_batched_tokens": 2048,
+        "enforce_eager": true
+      }
+    },
+    "scoring": {
+      "target_parser_version": "terminal-final-field-first",
+      "judge_parser_version": "judge-terminal-decision",
+      "length_policy": "all_incorrect",
+      "random_fallback": false,
+      "Z_policy": "incorrect_stop_retry",
+      "invalid_after_retries": "incorrect",
+      "numeric_tolerance": null
+    },
+    "cache": {
+      "model": "~/.cache/huggingface/hub",
+      "dataset": "~/.cache/huggingface/datasets"
+    },
+    "environment": {
+      "python": "3.12",
+      "system": "Linux x86-64",
+      "required_versions": {
+        "torch": "2.8.0",
+        "vllm": "0.11.0",
+        "transformers": "4.57.0",
+        "qwen-vl-utils": "0.0.14",
+        "datasets": "4.1.1",
+        "Pillow": "11.3.0",
+        "huggingface-hub": "0.36.2"
+      }
+    },
+    "official_source": {
+      "repo": "QwenLM/Qwen3-VL",
+      "commit": "96588727e44c78b25ba03ea03b8e12f7e64fd0da",
+      "full_source_sha256": {
+        "run_mmmu.py": "347acfda13bf6e2e69a050a402d11e06fc3d5de98ce67086c0f697387777f349",
+        "dataset_utils.py": "f683a085c47ced9abe686c32ae2ef75159fe3b468832199ae4d67795d9fd9b00",
+        "eval_utils.py": "63387fa5e941abeeb1ff48ed5b5d6105636caa5f7b4d8cf366f6be5d6ebd5796",
+        "common_utils.py": "9f0318aa1cb06ca8514b4c73394e29f76213a7565769bddf7ca4c0e142f90dce",
+        "infer_instruct.sh": "aff77d20d0f42fba813c9b8ef1f9576cea96cebe04290d997b8ef5592e92c9d0",
+        "eval_instruct.sh": "03c75ea0b37712a8e62e71ce282ccbe5cde2e866d43fc01465eb1919d1f93087"
+      },
+      "copied_rule_functions_sha256": "9bcd71522b503b484f21b71c5d4f6ebfa2b13ab2dc18be8ed9e4439bcfbd9d5f"
+    }
+  },
+  "code_sha256": {
+    "src/config.json": "b55e958623cd59e3da64aef4e228a98e83e586d924b80a8b3fd22dafd7c938e5",
+    "src/evaluate.py": "2dbc17e8953cbdf1ea1091e2890489c7f0592efe21e5d56a13bf1b61b642e75d",
+    "src/judge.py": "443a28c9cbfdd90fa6f6c5021a557dc97d58df3bed7967318ec972b773e3c0fb",
+    "src/parsers.py": "5023ed38d2e8af91304b258d5b3798ffc03df24324f49740953d943378a30b04",
+    "src/prepare.py": "581b4c2905fbd71f77c3e5f6f23a13c4444a125609a3c9b3ac4bfbe267f476ef"
+  },
+  "git_commit": "7740786a1b6b173db86285a00f06e93a44d8a225",
+  "model_identity": {
+    "path": "/home/latuca/MMDL_solo/runs/dpo_ep4_mix_b0.1_lr5e-6/train/merged",
+    "config_sha256": "85f41a755f2a72a5bdbd9082abbc9eb327145f4e8266cb177f2ceb41f1741d98",
+    "weights_sha256": {
+      "model-00001-of-00002.safetensors": "1e36d007893d3b6c4122981e3f0e78807b1f722afeeca6b6d2ec194ebc787f53",
+      "model-00002-of-00002.safetensors": "3635ce28671d405fb304672d1cfb173bbe7bfcd602b9d6ba4e444b439084b58a"
+    }
+  },
+  "cache_paths": {
+    "model": "/home/latuca/.cache/huggingface/hub",
+    "dataset": "/home/latuca/.cache/huggingface/datasets"
+  },
+  "mode": "inference",
+  "environment": {
+    "python": "3.12.16 (main, Oct 26 2026, 14:08:45) [Clang 23.1.3 ]",
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+    "versions": {
+      "torch": "2.8.0",
+      "vllm": "0.11.0",
+      "transformers": "4.57.0",
+      "qwen-vl-utils": "0.0.14",
+      "datasets": "4.1.1",
+      "Pillow": "11.3.0",
+      "huggingface-hub": "0.36.2"
+    },
+    "torch_cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 4090"
+  }
+}

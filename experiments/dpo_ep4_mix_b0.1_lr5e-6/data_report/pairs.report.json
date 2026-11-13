@@ -1,0 +1,17 @@
+{
+ "pairs": 1735,
+ "stats": {
+  "no_rejected": 952,
+  "chosen_from_base": 859,
+  "chosen_from_ep4": 876,
+  "questions_with_pairs": 988,
+  "no_chosen": 57
+ },
+ "by_vic_type": {
+  "C": 1250,
+  "V": 253,
+  "I": 232
+ },
+ "mean_chosen_tokens": 1256,
+ "mean_rejected_tokens": 535
+}

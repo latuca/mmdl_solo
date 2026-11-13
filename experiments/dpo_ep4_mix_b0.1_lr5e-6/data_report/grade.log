@@ -1,0 +1,50 @@
+응답 31952개, 규칙 채점 18562개, 저지 필요 13390개
+INFO 11-13 10:30:37 [__init__.py:216] Automatically detected platform cuda.
+INFO 11-13 10:30:39 [arg_utils.py:504] HF_HUB_OFFLINE is True, replace model_id [/home/latuca/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218] to model_path [/home/latuca/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218]
+INFO 11-13 10:30:39 [arg_utils.py:504] HF_HUB_OFFLINE is True, replace model_id [/home/latuca/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218] to model_path [/home/latuca/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218]
+INFO 11-13 10:30:39 [utils.py:233] non-default args: {'dtype': 'bfloat16', 'seed': 3407, 'max_model_len': 16384, 'max_num_batched_tokens': 16384, 'max_num_seqs': 64, 'disable_log_stats': True, 'model': '/home/latuca/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218'}
+INFO 11-13 10:30:39 [model.py:547] Resolved architecture: Qwen3ForCausalLM
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO 11-13 10:30:39 [model.py:1510] Using max model len 16384
+INFO 11-13 10:30:39 [scheduler.py:205] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 11-13 10:30:41 [__init__.py:216] Automatically detected platform cuda.
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m INFO 11-13 10:30:42 [core.py:644] Waiting for init message from front-end.
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m INFO 11-13 10:30:42 [core.py:77] Initializing a V1 LLM engine (v0.11.0) with config: model='/home/latuca/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218', speculative_config=None, tokenizer='/home/latuca/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=16384, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=3407, served_model_name=/home/latuca/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218, enable_prefix_caching=True, chunked_prefill_enabled=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.mamba_mixer2","vllm.mamba_mixer","vllm.short_conv","vllm.linear_attention","vllm.plamo2_mamba_mixer","vllm.gdn_attention","vllm.sparse_attn_indexer"],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"cudagraph_mode":[2,1],"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"use_inductor_graph_partition":false,"pass_config":{},"max_capture_size":128,"local_cache_dir":null}
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m INFO 11-13 10:30:44 [parallel_state.py:1208] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m WARNING 11-13 10:30:44 [topk_topp_sampler.py:66] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m INFO 11-13 10:30:44 [gpu_model_runner.py:2602] Starting to load model /home/latuca/.cache/huggingface/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218...
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m INFO 11-13 10:30:44 [gpu_model_runner.py:2634] Loading model from scratch...
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m INFO 11-13 10:30:44 [cuda.py:366] Using Flash Attention backend on V1 engine.
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/5 [00:00<?, ?it/s]
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m Loading safetensors checkpoint shards:  20% Completed | 1/5 [00:04<00:18,  4.75s/it]
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m Loading safetensors checkpoint shards:  40% Completed | 2/5 [00:12<00:18,  6.31s/it]
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m Loading safetensors checkpoint shards:  60% Completed | 3/5 [00:16<00:10,  5.28s/it]
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m Loading safetensors checkpoint shards:  80% Completed | 4/5 [00:25<00:06,  6.73s/it]
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:31<00:00,  6.59s/it]
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:31<00:00,  6.30s/it]
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m 
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m INFO 11-13 10:31:16 [default_loader.py:267] Loading weights took 31.55 seconds
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m INFO 11-13 10:31:16 [gpu_model_runner.py:2653] Model loading took 15.2683 GiB and 31.703827 seconds
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m INFO 11-13 10:31:21 [backends.py:548] Using cache directory: /home/latuca/.cache/vllm/torch_compile_cache/592a8c9958/rank_0_0/backbone for vLLM's torch.compile
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m INFO 11-13 10:31:21 [backends.py:559] Dynamo bytecode transform time: 4.52 s
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m INFO 11-13 10:31:22 [backends.py:164] Directly load the compiled graph(s) for dynamic shape from the cache, took 1.202 s
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m INFO 11-13 10:31:23 [monitor.py:34] torch.compile takes 4.52 s in total
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m INFO 11-13 10:31:25 [gpu_worker.py:298] Available KV cache memory: 4.23 GiB
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m INFO 11-13 10:31:25 [kv_cache_utils.py:1087] GPU KV cache size: 30,768 tokens
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m INFO 11-13 10:31:25 [kv_cache_utils.py:1091] Maximum concurrency for 16,384 tokens per request: 1.88x
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   0%|          | 0/19 [00:00<?, ?it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  16%|█▌        | 3/19 [00:00<00:00, 29.94it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  37%|███▋      | 7/19 [00:00<00:00, 30.47it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  58%|█████▊    | 11/19 [00:00<00:00, 30.53it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  79%|███████▉  | 15/19 [00:00<00:00, 31.41it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 19/19 [00:00<00:00, 30.29it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 19/19 [00:00<00:00, 30.48it/s]
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m Capturing CUDA graphs (decode, FULL):   0%|          | 0/11 [00:00<?, ?it/s]Capturing CUDA graphs (decode, FULL):  36%|███▋      | 4/11 [00:00<00:00, 32.37it/s]Capturing CUDA graphs (decode, FULL):  73%|███████▎  | 8/11 [00:00<00:00, 33.91it/s]Capturing CUDA graphs (decode, FULL): 100%|██████████| 11/11 [00:00<00:00, 34.25it/s]
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m INFO 11-13 10:31:26 [gpu_model_runner.py:3480] Graph capturing finished in 1 secs, took 0.24 GiB
+[1;36m(EngineCore_DP0 pid=4043087)[0;0m INFO 11-13 10:31:26 [core.py:210] init engine (profile, create kv cache, warmup model) took 10.14 seconds
+INFO 11-13 10:31:27 [llm.py:306] Supported_tasks: ['generate']
+저지 1회차: 미판정 302개
+저지 2회차: 미판정 199개
+저지 3회차: 미판정 148개
+라벨: Counter({('ep4', True): 11450, ('base', True): 9367, ('base', False): 6492, ('ep4', False): 4495, ('base', None): 117, ('ep4', None): 31})
+[rank0]:[W1113 11:13:28.338425240 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
