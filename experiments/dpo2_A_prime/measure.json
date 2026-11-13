@@ -1,0 +1,15 @@
+{
+ "pairs_measured": 64,
+ "batches": 4,
+ "steps_N": 78,
+ "beta": 0.1,
+ "z_target": 2.0,
+ "grad_l1_mean": 206664.828125,
+ "adam_delta_per_lr": 121179.4375,
+ "snr_ratio": 0.5863573332696231,
+ "lr_adam_estimate": 4.2319103257144005e-06,
+ "lr_signsgd_upper_estimate": 2.4814116532220775e-06,
+ "dpo_grad_norm_init": 5.535673141479492,
+ "nll_grad_norm": 0.528581440448761,
+ "lambda_balanced": 10.472696765099725
+}

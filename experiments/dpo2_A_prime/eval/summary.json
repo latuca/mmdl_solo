@@ -1,0 +1,207 @@
+{
+  "total": 900,
+  "graded": 900,
+  "correct": 573,
+  "incorrect": 327,
+  "accuracy": 0.6366666666666667,
+  "accuracy_percent": 63.66666666666667,
+  "aggregation": "unweighted mean of 30 subject accuracies",
+  "by_subject": {
+    "Accounting": {
+      "total": 30,
+      "correct": 20,
+      "incorrect": 10,
+      "accuracy": 0.6666666666666666
+    },
+    "Agriculture": {
+      "total": 30,
+      "correct": 14,
+      "incorrect": 16,
+      "accuracy": 0.4666666666666667
+    },
+    "Architecture_and_Engineering": {
+      "total": 30,
+      "correct": 16,
+      "incorrect": 14,
+      "accuracy": 0.5333333333333333
+    },
+    "Art": {
+      "total": 30,
+      "correct": 17,
+      "incorrect": 13,
+      "accuracy": 0.5666666666666667
+    },
+    "Art_Theory": {
+      "total": 30,
+      "correct": 24,
+      "incorrect": 6,
+      "accuracy": 0.8
+    },
+    "Basic_Medical_Science": {
+      "total": 30,
+      "correct": 22,
+      "incorrect": 8,
+      "accuracy": 0.7333333333333333
+    },
+    "Biology": {
+      "total": 30,
+      "correct": 18,
+      "incorrect": 12,
+      "accuracy": 0.6
+    },
+    "Chemistry": {
+      "total": 30,
+      "correct": 18,
+      "incorrect": 12,
+      "accuracy": 0.6
+    },
+    "Clinical_Medicine": {
+      "total": 30,
+      "correct": 20,
+      "incorrect": 10,
+      "accuracy": 0.6666666666666666
+    },
+    "Computer_Science": {
+      "total": 30,
+      "correct": 20,
+      "incorrect": 10,
+      "accuracy": 0.6666666666666666
+    },
+    "Design": {
+      "total": 30,
+      "correct": 25,
+      "incorrect": 5,
+      "accuracy": 0.8333333333333334
+    },
+    "Diagnostics_and_Laboratory_Medicine": {
+      "total": 30,
+      "correct": 11,
+      "incorrect": 19,
+      "accuracy": 0.36666666666666664
+    },
+    "Economics": {
+      "total": 30,
+      "correct": 26,
+      "incorrect": 4,
+      "accuracy": 0.8666666666666667
+    },
+    "Electronics": {
+      "total": 30,
+      "correct": 14,
+      "incorrect": 16,
+      "accuracy": 0.4666666666666667
+    },
+    "Energy_and_Power": {
+      "total": 30,
+      "correct": 13,
+      "incorrect": 17,
+      "accuracy": 0.43333333333333335
+    },
+    "Finance": {
+      "total": 30,
+      "correct": 23,
+      "incorrect": 7,
+      "accuracy": 0.7666666666666667
+    },
+    "Geography": {
+      "total": 30,
+      "correct": 14,
+      "incorrect": 16,
+      "accuracy": 0.4666666666666667
+    },
+    "History": {
+      "total": 30,
+      "correct": 22,
+      "incorrect": 8,
+      "accuracy": 0.7333333333333333
+    },
+    "Literature": {
+      "total": 30,
+      "correct": 25,
+      "incorrect": 5,
+      "accuracy": 0.8333333333333334
+    },
+    "Manage": {
+      "total": 30,
+      "correct": 18,
+      "incorrect": 12,
+      "accuracy": 0.6
+    },
+    "Marketing": {
+      "total": 30,
+      "correct": 28,
+      "incorrect": 2,
+      "accuracy": 0.9333333333333333
+    },
+    "Materials": {
+      "total": 30,
+      "correct": 14,
+      "incorrect": 16,
+      "accuracy": 0.4666666666666667
+    },
+    "Math": {
+      "total": 30,
+      "correct": 20,
+      "incorrect": 10,
+      "accuracy": 0.6666666666666666
+    },
+    "Mechanical_Engineering": {
+      "total": 30,
+      "correct": 12,
+      "incorrect": 18,
+      "accuracy": 0.4
+    },
+    "Music": {
+      "total": 30,
+      "correct": 5,
+      "incorrect": 25,
+      "accuracy": 0.16666666666666666
+    },
+    "Pharmacy": {
+      "total": 30,
+      "correct": 23,
+      "incorrect": 7,
+      "accuracy": 0.7666666666666667
+    },
+    "Physics": {
+      "total": 30,
+      "correct": 24,
+      "incorrect": 6,
+      "accuracy": 0.8
+    },
+    "Psychology": {
+      "total": 30,
+      "correct": 23,
+      "incorrect": 7,
+      "accuracy": 0.7666666666666667
+    },
+    "Public_Health": {
+      "total": 30,
+      "correct": 25,
+      "incorrect": 5,
+      "accuracy": 0.8333333333333334
+    },
+    "Sociology": {
+      "total": 30,
+      "correct": 19,
+      "incorrect": 11,
+      "accuracy": 0.6333333333333333
+    }
+  },
+  "method_counts": {
+    "explicit_final_parser": 772,
+    "output_limit_incorrect": 63,
+    "local_qwen3_8b_judge_parser": 57,
+    "official_parser_fallback": 8
+  },
+  "length_limit_incorrect": 63,
+  "judge_count": 57,
+  "judge_states": {
+    "valid_option": 37,
+    "invalid_option": 1,
+    "no_match": 18,
+    "unparsed": 1
+  },
+  "random_fallback": 0,
+  "exact_official_report_reproduction": false
+}

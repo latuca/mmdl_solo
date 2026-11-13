@@ -1,0 +1,16 @@
+{
+ "mode": "self",
+ "pairs": 1237,
+ "stats": {
+  "chosen_base": 1237,
+  "rejected_wrong": 1237,
+  "questions_with_pairs": 771
+ },
+ "by_vic_type": {
+  "C": 713,
+  "I": 309,
+  "V": 215
+ },
+ "mean_chosen_tokens": 1507,
+ "mean_rejected_tokens": 1439
+}

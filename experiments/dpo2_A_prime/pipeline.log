@@ -1,0 +1,8 @@
+[2026-11-13 16:08:53] ===== DPO2 파이프라인 시작 =====
+[2026-11-13 16:08:53] [쌍 A] 베이스 자기 정답 vs 자기 오답 (기존 베이스 샘플 재사용)
+[2026-11-13 16:08:54] 쌍 A: {"mode":"self","pairs":1237,"stats":{"chosen_base":1237,"rejected_wrong":1237,"questions_with_pairs":771},"by_vic_type":{"C":713,"I":309,"V":215},"mean_chosen_tokens":1507,"mean_rejected_tokens":1439}
+[2026-11-13 16:08:54] [측정] 학습률·λ 1차 근사 측정 (쌍 A 64개)
+[2026-11-13 16:11:16] 측정 결과: {"lr":4.23e-06,"lambda":1.0,"lr_raw":4.2319103257144005e-06,"lambda_raw":10.472696765099725,"clipped_to":{"lr":[1e-06,0.0001],"lambda":[0.05,1.0]}}
+[2026-11-13 16:11:16] [A_prime] 학습 시작 (lr 4.23e-06, beta 0.1, 1 epoch, 옵션: --rpo-alpha 0)
+[2026-11-13 17:07:42] [A_prime] MMMU-val 평가 시작
+[2026-11-14 05:20:02] [A_prime] 평가 완료: **DPO2-A_prime: 573/900 = 63.67%** (베이스라인 576/900 = 64.00%, 차이 -3문항 / -0.33%p) / {"correct":573,"n":900,"output_tokens_median":270.0,"output_tokens_mean":3603,"output_limit_truncated":63,"explicit_parser_n":772,"explicit_parser_correct":536,"explicit_parser_acc":0.6943,"baseline_ref":{"output_limit_truncated":81,"explicit_parser_n":759,"explicit_parser_correct":539,"explicit_parser_acc":0.7101}}
