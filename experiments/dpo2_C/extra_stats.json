@@ -1,0 +1,16 @@
+{
+ "correct": 600,
+ "n": 900,
+ "output_tokens_median": 281.0,
+ "output_tokens_mean": 1505,
+ "output_limit_truncated": 1,
+ "explicit_parser_n": 830,
+ "explicit_parser_correct": 568,
+ "explicit_parser_acc": 0.6843,
+ "baseline_ref": {
+  "output_limit_truncated": 81,
+  "explicit_parser_n": 759,
+  "explicit_parser_correct": 539,
+  "explicit_parser_acc": 0.7101
+ }
+}
