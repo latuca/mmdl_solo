@@ -1,0 +1,35 @@
+[2026-11-13 16:08:53] ===== DPO2 파이프라인 시작 =====
+[2026-11-13 16:08:53] [쌍 A] 베이스 자기 정답 vs 자기 오답 (기존 베이스 샘플 재사용)
+[2026-11-13 16:08:54] 쌍 A: {"mode":"self","pairs":1237,"stats":{"chosen_base":1237,"rejected_wrong":1237,"questions_with_pairs":771},"by_vic_type":{"C":713,"I":309,"V":215},"mean_chosen_tokens":1507,"mean_rejected_tokens":1439}
+[2026-11-13 16:08:54] [측정] 학습률·λ 1차 근사 측정 (쌍 A 64개)
+[2026-11-13 16:11:16] 측정 결과: {"lr":4.23e-06,"lambda":1.0,"lr_raw":4.2319103257144005e-06,"lambda_raw":10.472696765099725,"clipped_to":{"lr":[1e-06,0.0001],"lambda":[0.05,1.0]}}
+[2026-11-13 16:11:16] [A_prime] 학습 시작 (lr 4.23e-06, beta 0.1, 1 epoch, 옵션: --rpo-alpha 0)
+[2026-11-13 17:07:42] [A_prime] MMMU-val 평가 시작
+[2026-11-14 05:20:02] [A_prime] 평가 완료: **DPO2-A_prime: 573/900 = 63.67%** (베이스라인 576/900 = 64.00%, 차이 -3문항 / -0.33%p) / {"correct":573,"n":900,"output_tokens_median":270.0,"output_tokens_mean":3603,"output_limit_truncated":63,"explicit_parser_n":772,"explicit_parser_correct":536,"explicit_parser_acc":0.6943,"baseline_ref":{"output_limit_truncated":81,"explicit_parser_n":759,"explicit_parser_correct":539,"explicit_parser_acc":0.7101}}
+[2026-11-14 05:20:19] [A_prime] 개인 레포 푸시 완료
+[2026-11-14 05:20:19] [A] 학습 시작 (lr 4.23e-06, beta 0.1, 1 epoch, 옵션: --rpo-alpha __LAMBDA__)
+[2026-11-14 06:17:05] [A] MMMU-val 평가 시작
+[2026-11-14 11:31:15] ===== 학습률 실측 시험 + ERA 샘플링 시작 (A 평가는 중단함: lr 4.23e-6에서 학습이 거의 안 됨) =====
+[2026-11-14 11:31:15] [학습률 시험] lr 2e-5, 30스텝 (쌍 A, 순수 DPO)
+[2026-11-14 11:53:37] [학습률 시험] lr 5e-5, 30스텝 (쌍 A, 순수 DPO)
+[2026-11-14 12:15:55] [학습률 시험] lr 1e-4, 30스텝 (쌍 A, 순수 DPO)
+lr | 스텝 1-10 / 11-20 / 21-30 : 정답 선호 비율, 마진 z, chosen 보상, rejected 보상
+2e-5 | 0.47 z+0.001 c+0.078 r+0.077 / 0.53 z+0.014 c+0.224 r+0.210 / 0.47 z-0.008 c+0.169 r+0.176
+5e-5 | 0.49 z+0.027 c+0.224 r+0.197 / 0.57 z+0.061 c+0.253 r+0.191 / 0.48 z-0.004 c+0.096 r+0.100
+1e-4 | 0.46 z+0.014 c+0.219 r+0.205 / 0.56 z+0.082 c+0.183 r+0.101 / 0.53 z+0.011 c-0.026 r-0.036
+[2026-11-14 12:38:11] [ERA] ERA 지시로 베이스 응답 샘플링 (2,000문항 × 8, 지시는 샘플링 때만)
+[2026-11-14 18:42:47] [ERA] 채점 (평가 파서 + Qwen3-8B 저지)
+[2026-11-14 19:05:38] [쌍 B/C] chosen = ERA 정답·베이스 정답, rejected = 끊긴 응답·베이스 오답
+[2026-11-14 19:05:39] 쌍 B/C: {"mode":"era","pairs":1810,"stats":{"chosen_era":984,"rejected_truncated":451,"chosen_base":826,"rejected_wrong":1359,"questions_with_pairs":1035},"by_vic_type":{"V":290,"C":1139,"I":381},"mean_chosen_tokens":1637,"mean_rejected_tokens":2601}
+[2026-11-14 19:05:39] ===== 학습률 시험 + ERA 준비 완료. 학습률을 정한 뒤 run_dpo2.sh로 A′·A·B·C 재실행 =====
+[2026-11-14 19:07:07] ===== DPO2 파이프라인 시작 =====
+[2026-11-14 19:07:07] [신호 시험 B] 30스텝 (lr 5e-05, 옵션: --rpo-alpha __LAMBDA__)
+[2026-11-14 19:36:35] [신호 시험 C] 30스텝 (lr 5e-05, 옵션: --rpo-alpha __LAMBDA__ --vision-lora --gates --gate-lr 1e-3 --img-pref-types V,I)
+[2026-11-14 20:08:04] [신호 시험 판정] 오답쌍 {'n': 225, 'acc': 0.733, 'mean_z': 2.4951, 'verdict': 'signal'} / 끊긴응답쌍 {'n': 95, 'acc': 0.937, 'mean_z': 5.8174, 'verdict': 'signal'} / 이미지조건 {'n': 109, 'acc': 0.927, 'mean_z': 1.1099, 'verdict': 'signal'} → 유지 ['wrong', 'truncated'] A실행 True 이미지손실 True 최종쌍 1810
+[2026-11-14 20:08:04] [A_prime] 학습 시작 (lr 5e-05, beta 0.1, 1 epoch, 옵션: --rpo-alpha 0)
+[2026-11-14 20:13:15] ===== DPO2 파이프라인 시작 =====
+[2026-11-14 20:13:15] [신호 시험 판정] 조합별 {'base>wrong': {'n': 113, 'acc': 0.469, 'mean_z': -0.114, 'verdict': 'no_signal'}, 'base>truncated': {'n': 29, 'acc': 0.793, 'mean_z': 1.8149, 'verdict': 'undetermined'}, 'era>wrong': {'n': 112, 'acc': 1.0, 'mean_z': 5.1275, 'verdict': 'signal'}, 'era>truncated': {'n': 66, 'acc': 1.0, 'mean_z': 7.5761, 'verdict': 'signal'}} / 이미지조건 {'n': 109, 'acc': 0.927, 'mean_z': 1.1099, 'verdict': 'signal'} → 유지 ['base>truncated', 'era>wrong', 'era>truncated'] A실행 False 이미지손실 True 최종쌍 1134
+[2026-11-14 20:13:15] [A′·A] 자기 오답 쌍에 신호 없음 → 생략 (근거: lr_sweep/summary.txt, gate.json)
+[2026-11-14 20:13:15] [B] 학습 시작 (lr 5e-05, beta 0.1, 1 epoch, 옵션: --rpo-alpha __LAMBDA__)
+[2026-11-14 21:27:38] [B] MMMU-val 평가 시작
+[2026-11-15 02:33:14] [B] 평가 완료: **DPO2-B: 597/900 = 66.33%** (베이스라인 576/900 = 64.00%, 차이 +21문항 / +2.33%p) / {"correct":597,"n":900,"output_tokens_median":251.0,"output_tokens_mean":1584,"output_limit_truncated":2,"explicit_parser_n":807,"explicit_parser_correct":541,"explicit_parser_acc":0.6704,"baseline_ref":{"output_limit_truncated":81,"explicit_parser_n":759,"explicit_parser_correct":539,"explicit_parser_acc":0.7101}}

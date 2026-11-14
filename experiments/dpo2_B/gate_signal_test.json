@@ -1,0 +1,109 @@
+{
+ "rule": "steps>=11, n>=40, acc>=0.58",
+ "B_test": {
+  "wrong": {
+   "n": 225,
+   "acc": 0.733,
+   "mean_z": 2.4951,
+   "verdict": "signal"
+  },
+  "truncated": {
+   "n": 95,
+   "acc": 0.937,
+   "mean_z": 5.8174,
+   "verdict": "signal"
+  }
+ },
+ "B_test_by_chosen": {
+  "base": {
+   "n": 142,
+   "acc": 0.535,
+   "mean_z": 0.2799,
+   "verdict": "no_signal"
+  },
+  "era": {
+   "n": 178,
+   "acc": 1.0,
+   "mean_z": 6.0354,
+   "verdict": "signal"
+  }
+ },
+ "B_test_all": {
+  "n": 320,
+  "acc": 0.794,
+  "mean_z": 3.4814,
+  "verdict": "signal"
+ },
+ "C_test_img": {
+  "n": 109,
+  "acc": 0.927,
+  "mean_z": 1.1099,
+  "verdict": "signal"
+ },
+ "C_test_all": {
+  "n": 320,
+  "acc": 0.806,
+  "mean_z": 3.4863,
+  "verdict": "signal"
+ },
+ "B_test_combo": {
+  "base>wrong": {
+   "n": 113,
+   "acc": 0.469,
+   "mean_z": -0.114,
+   "verdict": "no_signal"
+  },
+  "base>truncated": {
+   "n": 29,
+   "acc": 0.793,
+   "mean_z": 1.8149,
+   "verdict": "undetermined"
+  },
+  "era>wrong": {
+   "n": 112,
+   "acc": 1.0,
+   "mean_z": 5.1275,
+   "verdict": "signal"
+  },
+  "era>truncated": {
+   "n": 66,
+   "acc": 1.0,
+   "mean_z": 7.5761,
+   "verdict": "signal"
+  }
+ },
+ "keep_combos": [
+  "base>truncated",
+  "era>wrong",
+  "era>truncated"
+ ],
+ "keep_rejected_src": [
+  "truncated",
+  "wrong"
+ ],
+ "run_A": false,
+ "img_pref": true,
+ "stop": false,
+ "final_pairs": {
+  "source": "pairs_B.jsonl",
+  "kept_combos": [
+   "base>truncated",
+   "era>wrong",
+   "era>truncated"
+  ],
+  "pairs": 1134,
+  "stats": {
+   "chosen_era": 984,
+   "chosen_base": 150,
+   "rejected_wrong": 683,
+   "rejected_truncated": 451
+  },
+  "by_vic_type": {
+   "V": 180,
+   "C": 741,
+   "I": 213
+  },
+  "mean_chosen_tokens": 1646,
+  "mean_rejected_tokens": 3238
+ }
+}
