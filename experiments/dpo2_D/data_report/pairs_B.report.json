@@ -1,0 +1,18 @@
+{
+ "mode": "era",
+ "pairs": 1810,
+ "stats": {
+  "chosen_era": 984,
+  "rejected_truncated": 451,
+  "chosen_base": 826,
+  "rejected_wrong": 1359,
+  "questions_with_pairs": 1035
+ },
+ "by_vic_type": {
+  "V": 290,
+  "C": 1139,
+  "I": 381
+ },
+ "mean_chosen_tokens": 1637,
+ "mean_rejected_tokens": 2601
+}

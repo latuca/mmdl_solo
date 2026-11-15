@@ -1,0 +1,6 @@
+{
+ "lr": 5e-05,
+ "lambda": 1.0,
+ "source": "lr sweep (2e-5/5e-5/1e-4, 30 steps each, pairs A, held-out per-step metrics) - see lr_sweep/summary.txt",
+ "old_lr_estimate_discarded": 4.23e-06
+}
