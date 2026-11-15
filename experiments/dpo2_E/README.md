@@ -3,7 +3,7 @@
 베이스 모델(Qwen3-VL-4B-Instruct @ ebb281ec)에서 시작하는 DPO ablation 4개 중 하나 (A′ → A → B → C).
 - 학습 문항: vic_era_2000 1,997문항. 학습·평가 프롬프트는 베이스라인과 동일 (ERA 지시는 B·C의 답안 샘플링 때만 사용)
 - 공통: beta 0.1, 1 epoch, LoRA r16/alpha 32/dropout 0.05, grad accum 16, AdamW wd 0.01, clip 1.0, cosine + warmup 3%, BF16, seed 3407
-- 학습률·SFT 항 가중치 λ: 학습률 실측 시험(2e-5/5e-5/1e-4 각 30스텝, lr_sweep_summary.txt)으로 정한 값을 4개 실험에 똑같이 사용 → {"lr":5e-05,"lambda":1.0,"source":"lrsweep(2e-5/5e-5/1e-4,30stepseach,pairsA,held-outper-stepmetrics)-seelr_sweep/summary.txt","old_lr_estimate_discarded":4.23e-06}
+- 학습률·SFT 항 가중치 λ: **E만 학습률 1e-5**(팀원 설정, 원래 맞던 문항을 덜 잃게 하려고 낮춤), λ 1.0. B·C·D는 실측 시험(lr_sweep_summary.txt)으로 정한 5e-5. 쌍 2,287개, 143스텝
 - 쌍 통계: data_report/pairs_E.report.json
 - 신호 시험(B·C 설정 각 30스텝, 처음 보는 쌍의 유형별 정답 선호)으로 효과 없는 요소를 뺐다: gate_signal_test.json → 유지한 쌍 조합 ['base>truncated', 'era>wrong', 'era>truncated'] / A′·A 실행 False / C 이미지 조건 손실 True
 
