@@ -36,3 +36,8 @@
 [2026-11-20 06:35:59] [E_s42] 평가 완료: **DPO2-E (재현, 학습 seed 42): 612/900 = 68.00%** (베이스라인 576/900 = 64.00%, 차이 +36문항 / +4.00%p) / {"correct":612,"n":900,"output_tokens_median":247.5,"output_tokens_mean":1817,"output_limit_truncated":3,"explicit_parser_n":807,"explicit_parser_correct":565,"explicit_parser_acc":0.7001,"baseline_ref":{"output_limit_truncated":81,"explicit_parser_n":759,"explicit_parser_correct":539,"explicit_parser_acc":0.7101}} (원래 608/900 = 67.56%)
 [2026-11-20 06:35:59] ===== DPO2-E seed 42 학습·평가 완료 =====
 [2026-11-20 09:28:49] [train_E_s1234] 150분 안에 수업 차단 시간이 시작됨 → 28330초 기다림
+[2026-11-20 19:48:33] [E_s1234] 학습 시작 (lr 1e-5, λ 1.0, 팀원 루프 쌍×4 + ERA>오답 + 보존 300, --img-pref-types V,I)
+[2026-11-20 22:00:03] [E_s1234] 학습 완료: {"step": 145, "epoch": 0, "loss": 0.5684, "reward_acc": 1.0, "margin": 3.2351, "reward_chosen": 4.0191, "reward_rejected": 0.7841, "logp_chosen": -615.6631, "logp_rejected": -350.4875, "nll_chosen": 0.2416, "img_margin": 0.0, "img_acc": 0.0, "img_pairs_in_step": 0, "nll_replay": 0.6517, "replay_in_s
+[2026-11-20 22:00:03] [E_s1234] MMMU-val 평가 시작
+[2026-11-21 04:10:56] [E_s1234] 평가 완료: **DPO2-E (재현, 학습 seed 1234): 601/900 = 66.78%** (베이스라인 576/900 = 64.00%, 차이 +25문항 / +2.78%p) / {"correct":601,"n":900,"output_tokens_median":247.0,"output_tokens_mean":1876,"output_limit_truncated":2,"explicit_parser_n":808,"explicit_parser_correct":551,"explicit_parser_acc":0.6819,"baseline_ref":{"output_limit_truncated":81,"explicit_parser_n":759,"explicit_parser_correct":539,"explicit_parser_acc":0.7101}} (원래 608/900 = 67.56%)
+[2026-11-21 04:10:56] ===== DPO2-E seed 1234 학습·평가 완료 =====
