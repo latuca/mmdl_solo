@@ -1,0 +1,38 @@
+[2026-11-17 23:37:56] ===== DPO2-E 재현 시작 (코드 배치 완료) =====
+[2026-11-17 23:37:56] [SFT 데이터] prepare_sft_general.py (max-tokens 8192)
+[2026-11-17 23:38:36] SFT 데이터: 1997문항 / {"n_in": 2000, "n_out": 1997, "stats": {"target_plain": 1124, "mc_options_stripped": 753, "target_answer_block": 651, "target_think_fallback": 222, "mc_options_kept_inline": 112}, "kept_by_type": {"I": 600, "C": 999, "V": 398}, "drops": {"no": 3}}
+[2026-11-17 23:38:36] [확인] sft_rows: 재현 1997 / 원래 1997 (허용 ±0) OK
+[2026-11-17 23:38:36] [베이스] 응답 샘플링 (문항당 8개)
+[2026-11-18 07:32:27] [확인] base_sample_rows: 재현 1997 / 원래 1997 (허용 ±0) OK
+[2026-11-18 07:32:27] [베이스] 채점 (평가 파서 + Qwen3-8B 저지)
+[2026-11-18 08:05:05] [베이스] 정답 비율 0.5812 (원래 9367/15976 = 0.5863)
+[2026-11-18 08:05:05] [확인] base_acc: 재현 0.5812 / 원래 0.5863 (허용 ±0.06) OK
+[2026-11-18 08:05:05] [ERA] ERA 지시로 베이스 응답 샘플링 (2,000문항 × 8, 지시는 샘플링 때만)
+[2026-11-18 20:02:16] [ERA] ERA 지시로 베이스 응답 샘플링 (2,000문항 × 8, 지시는 샘플링 때만)
+[2026-11-18 22:12:15] [확인] era_sample_rows: 재현 1997 / 원래 1997 (허용 ±0) OK
+[2026-11-18 22:12:15] [ERA] 채점 (평가 파서 + Qwen3-8B 저지)
+[2026-11-18 22:38:51] [쌍 B] chosen = ERA 정답·베이스 정답, rejected = 끊긴 응답·베이스 오답
+[2026-11-18 22:38:51] 쌍 B: {"mode":"era","pairs":1825,"stats":{"chosen_era":1004,"rejected_truncated":467,"chosen_base":821,"rejected_wrong":1358,"questions_with_pairs":1047},"by_vic_type":{"C":1153,"V":292,"I":380},"mean_chosen_tokens":1572,"mean_rejected_tokens":2613}
+[2026-11-18 22:38:51] [확인] pairs_B: 재현 1825 / 원래 1810 (허용 ±0.15) OK
+[2026-11-18 22:38:51] [확인] pairs_B_chosen_era: 재현 1004 / 원래 984 (허용 ±0.2) OK
+[2026-11-18 22:38:52] [쌍 B_final] {"source":"pairs_B.jsonl","kept_combos":["base>truncated","era>wrong","era>truncated"],"pairs":1170,"stats":{"chosen_era":1004,"chosen_base":166,"rejected_truncated":467,"rejected_wrong":703},"by_vic_type":{"C":766,"V":192,"I":212},"mean_chosen_tokens":1532,"mean_rejected_tokens":3243}
+[2026-11-18 22:38:52] [확인] pairs_B_final: 재현 1170 / 원래 1134 (허용 ±0.15) OK
+[2026-11-18 22:38:53] 쌍 D: {"rows":1273,"pairs":973,"stats":{"truncated_no_repeat_skipped":1136,"loop_responses":476,"loop_pair_chosen_base":100,"all_correct_questions":711,"loop_pair_chosen_era":170,"era_wrong_pairs":703,"replay":300,"replay_era":297},"by_vic_type":{"V":193,"C":565,"I":215},"mean_chosen_tokens":1224,"mean_rejected_tokens":2497}
+[2026-11-18 22:38:53] [확인] pairs_D: 재현 973 / 원래 931 (허용 ±0.15) OK
+[2026-11-18 22:38:53] [확인] pairs_D_era_wrong: 재현 703 / 원래 683 (허용 ±0.15) OK
+[2026-11-18 22:39:04] 쌍 E: {"rows":2307,"friend_loop_pairs":326,"friend_loop_dropped":0,"loop_repeat":4,"era_wrong_pairs":703,"replay":300,"by_vic_type":{"loop":1304,"V":270,"C":407,"I":326}}
+[2026-11-18 22:39:04] [확인] pairs_E_friend: 재현 326 / 원래 326 (허용 ±0) OK
+[2026-11-18 22:39:04] [확인] pairs_E_rows: 재현 2307 / 원래 2287 (허용 ±0.1) OK
+[2026-11-18 22:39:04] [E] 학습 시작 (lr 1e-5, λ 1.0, 팀원 루프 쌍×4 + ERA>오답 + 보존 300, --img-pref-types V,I)
+[2026-11-18 22:42:39] [E] 학습 시작 (lr 1e-5, λ 1.0, 팀원 루프 쌍×4 + ERA>오답 + 보존 300, --img-pref-types V,I)
+[2026-11-18 22:44:27] [E] 학습 시작 (lr 1e-5, λ 1.0, 팀원 루프 쌍×4 + ERA>오답 + 보존 300, --img-pref-types V,I)
+[2026-11-19 00:54:34] [E] 학습 완료: {"step": 145, "epoch": 0, "loss": 0.2991, "reward_acc": 1.0, "margin": 5.5916, "reward_chosen": 3.9626, "reward_rejected": -1.629, "logp_chosen": -937.6653, "logp_rejected": -99.1533, "nll_chosen": 0.2866, "img_margin": 0.0, "img_acc": 0.0, "img_pairs_in_step": 0, "nll_replay": 0.0, "replay_in_step"
+[2026-11-19 00:54:34] [E] MMMU-val 평가 시작
+[2026-11-19 06:38:32] [E] 평가 완료: **DPO2-E (재현): 602/900 = 66.89%** (베이스라인 576/900 = 64.00%, 차이 +26문항 / +2.89%p) / {"correct":602,"n":900,"output_tokens_median":245.5,"output_tokens_mean":1792,"output_limit_truncated":4,"explicit_parser_n":823,"explicit_parser_correct":567,"explicit_parser_acc":0.6889,"baseline_ref":{"output_limit_truncated":81,"explicit_parser_n":759,"explicit_parser_correct":539,"explicit_parser_acc":0.7101}} (원래 608/900 = 67.56%)
+[2026-11-19 06:38:32] ===== DPO2-E 재현 완료 (다음: rclone 회수) =====
+[2026-11-19 22:40:33] [E_s42] 학습 시작 (lr 1e-5, λ 1.0, 팀원 루프 쌍×4 + ERA>오답 + 보존 300, --img-pref-types V,I)
+[2026-11-20 00:50:39] [E_s42] 학습 완료: {"step": 145, "epoch": 0, "loss": 0.3959, "reward_acc": 1.0, "margin": 3.9475, "reward_chosen": 3.2234, "reward_rejected": -0.7241, "logp_chosen": -219.1659, "logp_rejected": -34.8744, "nll_chosen": 0.2263, "img_margin": 1.1353, "img_acc": 1.0, "img_pairs_in_step": 1, "nll_replay": 0.0, "replay_in_s
+[2026-11-20 00:50:39] [E_s42] MMMU-val 평가 시작
+[2026-11-20 06:35:59] [E_s42] 평가 완료: **DPO2-E (재현, 학습 seed 42): 612/900 = 68.00%** (베이스라인 576/900 = 64.00%, 차이 +36문항 / +4.00%p) / {"correct":612,"n":900,"output_tokens_median":247.5,"output_tokens_mean":1817,"output_limit_truncated":3,"explicit_parser_n":807,"explicit_parser_correct":565,"explicit_parser_acc":0.7001,"baseline_ref":{"output_limit_truncated":81,"explicit_parser_n":759,"explicit_parser_correct":539,"explicit_parser_acc":0.7101}} (원래 608/900 = 67.56%)
+[2026-11-20 06:35:59] ===== DPO2-E seed 42 학습·평가 완료 =====
+[2026-11-20 09:28:49] [train_E_s1234] 150분 안에 수업 차단 시간이 시작됨 → 28330초 기다림

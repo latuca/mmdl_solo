@@ -1,0 +1,22 @@
+{
+ "source": "pairs_B.jsonl",
+ "kept_combos": [
+  "base>truncated",
+  "era>wrong",
+  "era>truncated"
+ ],
+ "pairs": 1170,
+ "stats": {
+  "chosen_era": 1004,
+  "chosen_base": 166,
+  "rejected_truncated": 467,
+  "rejected_wrong": 703
+ },
+ "by_vic_type": {
+  "C": 766,
+  "V": 192,
+  "I": 212
+ },
+ "mean_chosen_tokens": 1532,
+ "mean_rejected_tokens": 3243
+}

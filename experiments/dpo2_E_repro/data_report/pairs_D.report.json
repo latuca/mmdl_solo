@@ -1,0 +1,21 @@
+{
+ "rows": 1273,
+ "pairs": 973,
+ "stats": {
+  "truncated_no_repeat_skipped": 1136,
+  "loop_responses": 476,
+  "loop_pair_chosen_base": 100,
+  "all_correct_questions": 711,
+  "loop_pair_chosen_era": 170,
+  "era_wrong_pairs": 703,
+  "replay": 300,
+  "replay_era": 297
+ },
+ "by_vic_type": {
+  "V": 193,
+  "C": 565,
+  "I": 215
+ },
+ "mean_chosen_tokens": 1224,
+ "mean_rejected_tokens": 2497
+}

@@ -1,0 +1,14 @@
+{
+ "rows": 2307,
+ "friend_loop_pairs": 326,
+ "friend_loop_dropped": 0,
+ "loop_repeat": 4,
+ "era_wrong_pairs": 703,
+ "replay": 300,
+ "by_vic_type": {
+  "loop": 1304,
+  "V": 270,
+  "C": 407,
+  "I": 326
+ }
+}
